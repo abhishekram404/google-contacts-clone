@@ -462,12 +462,6 @@
   cursor: pointer;
 }
 
-.App .container .main ::-webkit-scrollbar {
-  visibility: hidden;
-  display: none;
-  opacity: 0;
-}
-
 .App .collapsed {
   -ms-grid-columns: 0px 100%;
       grid-template-columns: 0px 100%;
