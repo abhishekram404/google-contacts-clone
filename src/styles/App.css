@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("../assets/fonts/Product Sans Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+.App .navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 15px;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .navbar .main-menu {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+}
+
+.App .navbar .main-menu:hover {
+  background-color: rgba(60, 64, 67, 0.08);
+}
+
+.App .navbar .main-menu > svg {
+  width: 95%;
+  fill: #5f6368;
+}
+
+.App .navbar .logo {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .navbar .logo img {
+  height: 95%;
+  width: 95%;
+  border-radius: 50%;
+}
+
+.App .navbar h2 {
+  font-family: "Product Sans";
+  color: #5f6368;
+  font-weight: 300;
+  margin-right: 50px;
+  padding: 0px 10px;
+}
+
+.App .navbar .search-box {
+  background-color: #f1f3f4;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3px 5px;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .navbar .search-box .icon-holder {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+.App .navbar .search-box .icon-holder:hover {
+  background-color: rgba(60, 64, 67, 0.08);
+}
+
+.App .navbar .search-box .icon-holder svg {
+  fill: #73767b;
+}
+
+.App .navbar .search-box input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px;
+  font-size: 1.1rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.App .navbar .search-box-focused {
+  background-color: transparent;
+  -webkit-box-shadow: -1px 1px 5px rgba(60, 64, 67, 0.3), 1px 1px 5px rgba(60, 64, 67, 0.3);
+          box-shadow: -1px 1px 5px rgba(60, 64, 67, 0.3), 1px 1px 5px rgba(60, 64, 67, 0.3);
+}
+
+.App .navbar .white-space {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.App .navbar .right-icon-set {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .navbar .right-icon-set .icon-set svg {
+  width: 20px;
+  fill: #73767b;
+  margin: 0px 8px;
+}
+
+.App .navbar .right-icon-set .google-apps {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 0px 5px;
+}
+
+.App .navbar .right-icon-set .google-apps:hover {
+  background-color: rgba(60, 64, 67, 0.08);
+}
+
+.App .navbar .right-icon-set .google-apps svg {
+  fill: #73767b;
+}
+
+.App .navbar .right-icon-set .accounts-btn {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #3e3e3e;
+}
+
+.App .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 300px 1fr;
+      grid-template-columns: 300px 1fr;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .container .sidebar {
+  padding: 15px 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .container .sidebar .add-new-contacts {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #fff;
+  border-radius: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-shadow: 1px 1px 5px #babdbd;
+          box-shadow: 1px 1px 5px #babdbd;
+  padding: 5px 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.App .container .sidebar .add-new-contacts .icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .container .sidebar .add-new-contacts .icon svg {
+  width: 95%;
+}
+
+.App .container .sidebar .add-new-contacts h4 {
+  font-family: "Product Sans";
+  font-weight: 300;
+  color: #404447;
+  padding: 0px 10px;
+}
+
+.App .container .sidebar .add-new-contacts:hover {
+  background-color: rgba(35, 110, 212, 0.08);
+}
+
+.App .container .sidebar .add-new-contacts:hover h4 {
+  color: #236ed4;
+}
+
+.App .container .sidebar .sidebar-menus {
+  padding: 25px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .container .sidebar .sidebar-menus .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 20px;
+  border-radius: 0px 40px 40px 0px;
+  cursor: pointer;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.App .container .sidebar .sidebar-menus .menu:hover {
+  background-color: #f1f3f4;
+}
+
+.App .container .sidebar .sidebar-menus .menu svg {
+  margin: 0px 20px 0px 10px;
+  fill: #73767b;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.App .container .sidebar .sidebar-menus .menu h4 {
+  color: #202124;
+  font-family: "Product Sans";
+  font-weight: 400;
+}
+
+.App .container .sidebar .sidebar-menus .label-expanded svg {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.App .container .sidebar .sidebar-menus .active {
+  background-color: rgba(35, 110, 212, 0.1);
+}
+
+.App .container .sidebar .sidebar-menus .active svg {
+  fill: #236ed4;
+}
+
+.App .container .sidebar .sidebar-menus .active h4 {
+  color: #236ed4;
+}
+
+.App .container .main {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  padding-right: 60px;
+}
+
+.App .container .main .title-bar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1.2fr 0.7fr 0.7fr 0.7fr 0.7fr 0.4fr;
+      grid-template-columns: 1.2fr 0.7fr 0.7fr 0.7fr 0.7fr 0.4fr;
+  gap: 15px;
+  padding: 15px;
+  border-bottom: 0.1px solid #e0e0e0;
+}
+
+.App .container .main .title-bar h4 {
+  font-family: "Roboto";
+  color: #5f6368;
+  font-size: 0.9rem;
+}
+
+.App .container .main .title-bar svg {
+  -ms-grid-column-align: end;
+      justify-self: end;
+  fill: #5f6368;
+}
+
+.App .container .main .contacts-list {
+  height: calc(100vh - 180px);
+  overflow: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.App .container .main .contacts-list .contact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 40px 1fr 0.7fr 0.7fr 0.7fr 0.7fr 0.4fr;
+      grid-template-columns: 40px 1fr 0.7fr 0.7fr 0.7fr 0.7fr 0.4fr;
+  gap: 15px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 7px 15px;
+  margin: 5px 0px;
+}
+
+.App .container .main .contacts-list .contact:hover {
+  background-color: #f0f0f0;
+}
+
+.App .container .main .contacts-list .contact .box-cont {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .container .main .contacts-list .contact .box-cont input {
+  height: 20px;
+  width: 20px;
+}
+
+.App .container .main .contacts-list .contact .img-cont {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: salmon;
+}
+
+.App .container .main .contacts-list .contact .img-cont h3 {
+  color: #ffffff;
+}
+
+.App .container .main .contacts-list .contact h4 {
+  color: #303134;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.App .container .main .contacts-list .contact h4 .label {
+  background-color: #e0e0e0;
+  color: #424242;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 4px;
+  font-size: 0.7rem;
+  border-radius: 5px;
+  font-family: "Roboto";
+  font-weight: 200;
+}
+
+.App .container .main .contacts-list .contact .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.App .container .main .contacts-list .contact .options svg {
+  margin: 0px 15px;
+  fill: #73767b;
+  cursor: pointer;
+}
+
+.App .container .main ::-webkit-scrollbar {
+  visibility: hidden;
+  display: none;
+  opacity: 0;
+}
+
+.App .collapsed {
+  -ms-grid-columns: 0px 100%;
+      grid-template-columns: 0px 100%;
+}
+
+.App .collapsed .sidebar {
+  -webkit-transform: translateX(-300px);
+          transform: translateX(-300px);
+}
+/*# sourceMappingURL=App.css.map */

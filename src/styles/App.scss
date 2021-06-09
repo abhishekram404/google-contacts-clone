@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Product Sans";
+  src: url("../assets/fonts/Product Sans Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+$hover-background: rgba(60, 64, 67, 0.08);
+$svg-fill: #73767b;
+
+@mixin circle($length) {
+  height: $length;
+  width: $length;
+  border-radius: 50%;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.App {
+  @import "./navbar.scss";
+  .container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    transition: 0.3s;
+    @import "./sidebar.scss";
+    @import "./main";
+  }
+  .collapsed {
+    grid-template-columns: 0px 100%;
+    .sidebar {
+      transform: translateX(-300px);
+    }
+  }
+}
+
+//334 227

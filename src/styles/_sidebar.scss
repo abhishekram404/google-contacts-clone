@@ -1,0 +1,79 @@
+.sidebar {
+  padding: 15px 5px;
+  // max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: 0.3s;
+  .add-new-contacts {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    border-radius: 40px;
+    width: fit-content;
+    box-shadow: 1px 1px 5px #babdbd;
+    padding: 5px 10px;
+    transition: 0.3s;
+    .icon {
+      @include circle(40px);
+      @include flex-center;
+      svg {
+        width: 95%;
+      }
+    }
+    h4 {
+      font-family: "Product Sans";
+      font-weight: 300;
+      color: #404447;
+      padding: 0px 10px;
+    }
+    &:hover {
+      background-color: rgba($color: #236ed4, $alpha: 0.08);
+      h4 {
+        color: #236ed4;
+      }
+    }
+  }
+  .sidebar-menus {
+    padding: 25px 0px;
+    display: flex;
+    flex-direction: column;
+    .menu {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      border-radius: 0px 40px 40px 0px;
+      cursor: pointer;
+      transition: 0.1s;
+
+      &:hover {
+        background-color: #f1f3f4;
+      }
+      svg {
+        margin: 0px 20px 0px 10px;
+        fill: $svg-fill;
+        transition: 0.1s;
+      }
+      h4 {
+        color: #202124;
+        font-family: "Product Sans";
+        font-weight: 400;
+      }
+    }
+    .label-expanded {
+      svg {
+        transform: rotate(-180deg);
+      }
+    }
+    .active {
+      background-color: rgba($color: #236ed4, $alpha: 0.1);
+      svg {
+        fill: #236ed4;
+      }
+      h4 {
+        color: #236ed4;
+      }
+    }
+  }
+}

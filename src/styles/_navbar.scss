@@ -1,0 +1,114 @@
+.navbar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 15px;
+  overflow: hidden;
+  transition: 0.3s;
+  .main-menu {
+    @include circle(40px);
+    @include flex-center;
+    padding: 10px;
+    // @include circle(40px);
+    // border-radius: 50%;
+
+    &:hover {
+      background-color: rgba(60, 64, 67, 0.08);
+    }
+    & > svg {
+      // width: 30px;
+      width: 95%;
+      fill: #5f6368;
+      // transform: scale();
+    }
+  }
+  .logo {
+    @include circle(40px);
+    @include flex-center;
+    // padding: 10px;
+    img {
+      @include circle(95%);
+    }
+  }
+  h2 {
+    font-family: "Product Sans";
+    color: #5f6368;
+    font-weight: 300;
+    margin-right: 50px;
+    padding: 0px 10px;
+  }
+  .search-box {
+    background-color: #f1f3f4;
+    flex: 1;
+    padding: 3px 5px;
+    border-radius: 10px;
+    @include flex-center;
+    .icon-holder {
+      @include circle(40px);
+      @include flex-center;
+      padding: 10px;
+      margin-right: 10px;
+
+      &:hover {
+        background-color: $hover-background;
+      }
+      svg {
+        // width: 95%;
+        // padding: 10px;
+        fill: $svg-fill;
+      }
+    }
+    input {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      flex: 1;
+      padding: 10px;
+      font-size: 1.1rem;
+      font-family: "Roboto", sans-serif;
+    }
+  }
+
+  .search-box-focused {
+    background-color: transparent;
+    box-shadow: -1px 1px 5px rgba(60, 64, 67, 0.3),
+      1px 1px 5px rgba(60, 64, 67, 0.3);
+  }
+
+  .white-space {
+    flex: 1;
+  }
+  .right-icon-set {
+    display: flex;
+    align-items: center;
+    .icon-set {
+      svg {
+        width: 20px;
+        fill: #73767b;
+        margin: 0px 8px;
+      }
+    }
+    .google-apps {
+      width: 40px;
+      height: 40px;
+      padding: 10px;
+      border-radius: 50%;
+      margin: 0px 5px;
+      &:hover {
+        background-color: $hover-background;
+      }
+      svg {
+        fill: $svg-fill;
+      }
+    }
+    .accounts-btn {
+      @include circle(40px);
+      background-color: #3e3e3e;
+    }
+  }
+}
+
+// svg {
+//   height: 20px;
+//   width: 20px;
+// }
