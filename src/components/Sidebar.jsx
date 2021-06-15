@@ -1,17 +1,24 @@
-import React, { useState, useRef } from "react";
-
+import React, { useState } from "react";
+import { create_mode_on } from "../redux/actions/actions";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 
 export default function Sidebar() {
+  const dispatch = useDispatch();
+  const [isLabelExpanded, setLabelExpanded] = useState(false);
+
   const HR = styled.hr`
     border: 0.01px solid rgba(0, 0, 0, 0.1);
     margin: 5px 0px;
   `;
-  const [isLabelExpanded, setLabelExpanded] = useState(false);
-
   return (
     <div className="sidebar">
-      <div className="add-new-contacts">
+      <div
+        className="add-new-contacts"
+        onClick={() => {
+          dispatch(create_mode_on());
+        }}
+      >
         <div className="icon">
           <svg width="36" height="36" viewBox="0 0 36 36">
             <path fill="#34A853" d="M16 16v14h4V20z"></path>

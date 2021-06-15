@@ -15,6 +15,229 @@
   src: url("../assets/fonts/Roboto-Regular.ttf") format("truetype");
 }
 
+.create-cont {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1;
+}
+
+.create-cont .create {
+  height: 450px;
+  width: 700px;
+  background: #ffffff;
+  border-radius: 20px;
+  -webkit-box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 76px 1fr 60px;
+      grid-template-rows: 76px 1fr 60px;
+  z-index: 100;
+}
+
+.create-cont .create header {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 10px 24px;
+  font-family: "Product Sans", "Roboto";
+  border-bottom: 1px solid rgba(115, 118, 123, 0.2);
+}
+
+.create-cont .create header h4 {
+  font-weight: 300;
+}
+
+.create-cont .create header .label-btn {
+  margin-left: 10px;
+  font-weight: 100;
+  color: #73767b;
+  padding: 5px 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+  border: 1px solid rgba(115, 118, 123, 0.2);
+}
+
+.create-cont .create header .label-btn svg {
+  margin-right: 5px;
+  fill: #73767b;
+}
+
+.create-cont .create form {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  padding: 10px 30px 20px 10px;
+  border-bottom: 1px solid rgba(115, 118, 123, 0.2);
+}
+
+.create-cont .create form .row {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px 1fr;
+      grid-template-columns: 100px 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.create-cont .create form .row .profile-pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.create-cont .create form .row .profile-pic .pic {
+  background: #73767b;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+}
+
+.create-cont .create form .row .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.create-cont .create form .row .icon svg {
+  fill: #73767b;
+}
+
+.create-cont .create form .row .input-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.create-cont .create form .row .input-fields label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  margin: 0px 5px;
+  height: 100%;
+  /* Chrome, Safari, Edge, Opera */
+  /* Firefox */
+}
+
+.create-cont .create form .row .input-fields label span {
+  position: absolute;
+  padding-bottom: 5px;
+  color: #73767b;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+  pointer-events: none;
+}
+
+.create-cont .create form .row .input-fields label .focused {
+  color: royalblue;
+  top: 20%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.create-cont .create form .row .input-fields label input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-bottom: 5px;
+  color: #73767b;
+  background: transparent;
+}
+
+.create-cont .create form .row .input-fields label input::-webkit-outer-spin-button,
+.create-cont .create form .row .input-fields label input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.create-cont .create form .row .input-fields label input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.create-cont .create form .row .phone label:first-child {
+  -webkit-box-flex: 0.2;
+      -ms-flex: 0.2;
+          flex: 0.2;
+}
+
+.create-cont .create footer {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 200px 1fr 150px 150px;
+      grid-template-columns: 200px 1fr 150px 150px;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.create-cont .create footer a {
+  text-decoration: none;
+  color: #1a73e8;
+  font-family: "Product Sans";
+}
+
+#disabled {
+  color: #73767b;
+  pointer-events: none;
+}
+
 .App .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -370,8 +593,8 @@
 .App .container .main .contacts-list .contact {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40px 1fr 0.7fr 0.7fr 0.7fr 0.7fr 0.4fr;
-      grid-template-columns: 40px 1fr 0.7fr 0.7fr 0.7fr 0.7fr 0.4fr;
+  -ms-grid-columns: 40px 1fr 0.7fr 0.7fr 0.7fr 0.7fr 150px;
+      grid-template-columns: 40px 1fr 0.7fr 0.7fr 0.7fr 0.7fr 150px;
   gap: 15px;
   -webkit-box-align: center;
       -ms-flex-align: center;

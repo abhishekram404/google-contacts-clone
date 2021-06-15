@@ -28,6 +28,7 @@ $svg-fill: #73767b;
   align-items: center;
 }
 
+@import "./create";
 .App {
   @import "./navbar.scss";
   .container {
